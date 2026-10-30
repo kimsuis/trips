@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>여행 보드</title>
+<style>
+:root { --bg: #f6f5f2; --surface: #fff; --line: #e2dfd8; --text: #1d1c1a; --muted: #6b6862; --accent: #1f5f8b; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #141413; --surface: #1d1d1b; --line: #33322e; --text: #ecebe7; --muted: #a29f97; --accent: #7db7e0; } }
+:root[data-theme="dark"] { --bg: #141413; --surface: #1d1d1b; --line: #33322e; --text: #ecebe7; --muted: #a29f97; --accent: #7db7e0; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.6 system-ui, -apple-system, "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+h1 { margin: 0 0 4px; font-size: 26px; }
+p.sub { margin: 0 0 20px; color: var(--muted); }
+a.trip { display: block; text-decoration: none; color: inherit; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; margin-bottom: 12px; }
+a.trip:hover { border-color: var(--accent); }
+a.trip b { font-size: 18px; }
+a.trip span { display: block; color: var(--muted); font-size: 14px; margin-top: 4px; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>여행 보드</h1>
+  <p class="sub">여행을 고르면 그 여행의 일정·숙소·교통·관광을 볼 수 있어요. 보드 위쪽에서도 여행을 바꿀 수 있어요.</p>
+  <a class="trip" href="japan-2026-winter/"><b>🇯🇵 2026 겨울 일본</b><span>12/19 ~ 12/31 또는 1/1 · 요코하마 → 센다이(JR EAST PASS) → 도쿄 · 콘서트·CDJ</span></a>
+  <a class="trip" href="europe-2027-summer/"><b>🇪🇺 2027 여름 유럽</b><span>여름방학 중 3주 · 부다페스트 거점 · 2명 · 관광 후보 조사 중</span></a>
+</main>
+</body>
+</html>
