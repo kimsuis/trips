@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>겨울 일본 여행</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f5f8b'/%3E%3Ccircle cx='47' cy='17' r='7' fill='%23e8483b'/%3E%3Cpath d='M4 56 L26 20 L38 20 L60 56 Z' fill='%238fc1e3'/%3E%3Cpath d='M26 20 L38 20 L44.7 31 L41 28.5 L37 32.5 L32 28.5 L27 32.5 L23 28.5 L19.3 31 Z' fill='%23ffffff'/%3E%3C/svg%3E">
 <style>
 :root {
   --bg: #f6f5f2; --surface: #ffffff; --surface-2: #f0eee9; --line: #e2dfd8;
@@ -239,12 +240,12 @@ table.legs td { font-size: 13px; }
 <!-- TRIP-SWITCH:END -->
 
   <h1>겨울 일본 여행 · 12/19 ~ 12/31 또는 1/1</h1>
-  <p>김해 ↔ 나리타 · 12/26까지 친구와 2인, 12/19~22 친구 1명 더 (3인) · 이후 혼자 · 마지막 정리 2026-11-03</p>
+  <p>김해 ↔ 나리타 · 12/19~22 suis·프론트 엔드·백능아 3인 · 12/28까지 프론트 엔드와 2인 · 이후 혼자 · 마지막 정리 2026-11-04</p>
 </header>
 
 <nav class="tabs" aria-label="보드 메뉴"><div class="wrap" role="tablist">
   <button role="tab" data-tab="home">한눈에</button>
-  <button role="tab" data-tab="budget">예산</button>
+  <button role="tab" data-tab="settle">정산</button>
   <button role="tab" data-tab="todo">할 일</button>
   <button role="tab" data-tab="plan">일정</button>
   <button role="tab" data-tab="spots">관광</button>
@@ -260,7 +261,7 @@ table.legs td { font-size: 13px; }
 <!-- ===== 한눈에 ===== -->
 <section class="panel" id="home" role="tabpanel">
   <div class="grid">
-    <a class="card stat" href="#budget"><div class="k">예산 (1인)</div><div class="v">약 48만 원 + $108.5 + 약 18만 엔</div><div class="s">항공 · 숙박 · 패스 · 교통 · 공연 (추정 포함, 식비 제외)</div></a>
+    <a class="card stat" href="#settle"><div class="k">정산 · suis 몫</div><div class="v" id="home-settle"></div><div class="s">항공 · 숙박 · 패스 · 교통 · 공연 (예정 포함, 식비 제외) · 친구 몫은 정산 탭</div></a>
     <a class="card stat" href="#stay"><div class="k">숙소</div><div class="v">필요한 숙소 다 잡음</div><div class="s">센다이·우쓰노미야 중 하나 취소 · 12/31은 예비</div></a>
     <a class="card stat" href="#flight"><div class="k">항공</div><div class="v">예약 전 · 1인 약 47만~50만 원</div><div class="s">귀국일 미정 · 11/1 유류할증료 인상으로 4~5만 원 오름</div></a>
     <a class="card stat" href="#move"><div class="k">교통</div><div class="v">JR EAST PASS 5일권</div><div class="s">12/21~25 · 패스 밖 이동은 교통 탭</div></a>
@@ -295,36 +296,12 @@ table.legs td { font-size: 13px; }
   <p class="note">노란 줄 = JR EAST PASS 사용일. 자세한 이동·대안은 <a href="#plan">일정</a> 탭.</p>
 </section>
 
-<!-- ===== 예산 ===== -->
-<section class="panel" id="budget" role="tabpanel">
-  <h2>1인 예산</h2>
-  <p class="note" style="margin-top:-4px">2인실은 반씩. 원·엔·달러는 결제 통화 그대로 적음 (환율 변환 안 함). "추정"은 실제 결제 전 금액.</p>
-  <div class="scroll"><table>
-    <thead><tr><th>항목</th><th>내용</th><th class="price">금액</th><th>상태</th></tr></thead>
-    <tbody>
-      <tr><td class="num">항공</td><td>김해↔나리타 왕복 (11/1 조회 · 1/1 귀국: 제주 10:45 468,248~502,200 / 12/31 귀국: 539,018~574,200)</td><td class="price">약 468,000~575,000원</td><td><span class="chip warn">예약 전</span></td></tr>
-      <tr><td class="num">숙박</td><td>新横浜国際ホテル 2박 (2인 $217)</td><td class="price">$108.5</td><td><span class="chip ok">결제함</span></td></tr>
-      <tr><td></td><td>東横INN 仙台西口広瀬通 5박 (2인 54,100엔) <span class="note">또는 宇都宮 23,375엔</span></td><td class="price">27,050엔</td><td><span class="chip ok">예약함</span> 현장 결제</td></tr>
-      <tr class="dim"><td></td><td>12/22 도쿄 1박 (2인 10,800엔, 센다이 거점일 때만)</td><td class="price">5,400엔</td><td>후보</td></tr>
-      <tr><td></td><td>東横INN 戸田公園 5박 (혼자)</td><td class="price">38,700엔</td><td><span class="chip ok">예약함</span> 현장 결제</td></tr>
-      <tr><td></td><td>東横INN 戸田公園 12/31 1박 추가 (혼자)</td><td class="price">9,500엔</td><td><span class="chip warn">예비</span> 확정 아님</td></tr>
-      <tr><td class="num">패스</td><td>JR EAST PASS 5일권 (12/21~25)</td><td class="price">35,000엔</td><td>구매 전</td></tr>
-      <tr><td class="num">패스 밖 교통</td><td>12/19 나리타→신요코하마 · 12/26 센다이→도쿄→마쿠하리 · 지하철 · 12/27~31 시내·마쿠하리·나리타 · 뇨토 버스</td><td class="price">약 2만~2.5만 엔</td><td>추정</td></tr>
-      <tr><td class="num">공연</td><td>CDJ 12/26 + 12/29</td><td class="price">28,550엔</td><td><span class="chip ok">결제함</span></td></tr>
-      <tr><td></td><td>tuki.×星街すいせい</td><td class="price">9,900엔</td><td><span class="chip ok">결제함</span></td></tr>
-      <tr><td></td><td>ロクデナシ</td><td class="price">9,380엔</td><td><span class="chip ok">결제함</span></td></tr>
-      <tr class="dim"><td></td><td>Mrs. GREEN APPLE (당첨 시) / りりあ。 / tayori / なるみや / 山田庵巳 3,500+드링크</td><td class="price">미확인</td><td>가격 채우기</td></tr>
-      <tr class="sum"><td>합계</td><td>확인된 금액 + 추정 (공연 미확인분 제외)</td><td class="price">약 51.1만~51.8만 원<br>+ $108.5<br>+ 약 17.8만~18.3만 엔</td><td></td></tr>
-    </tbody>
-  </table></div>
-  <p class="note">엔 합계 = 숙박 75,250 + 패스 35,000 + 교통 2만~2.5만 (추정) + 공연 47,830 (결제 완료분) (도쿄 1박 넣으면 +5,400, 미세스·tayori·なるみや 등 추가 공연은 별도). 식비·굿즈·기념품은 아직 안 넣음.</p>
-
-  <h2>친구 몫 (12/26까지)</h2>
-  <ul class="tight note" style="color:var(--text)">
-    <li>항공: 12/26 이후 일정에 따라 귀국편 따로 (같이 1/1이면 왕복 약 47만~49만 원)</li>
-    <li>숙박 반: 新横浜 $108.5 + 센다이 27,050엔 (또는 우쓰노미야 23,375엔)</li>
-    <li>JR EAST PASS 5일권 35,000엔 · 12/26 이후 일정이 다르면 귀국편 따로</li>
-  </ul>
+<!-- ===== 정산 ===== -->
+<section class="panel" id="settle" role="tabpanel">
+  <h2>정산 <span class="note">누가 얼마 냈고 누구에게 얼마 보낼지</span></h2>
+  <div class="subnav" id="settle-who" role="tablist" aria-label="사람 고르기"></div>
+  <div id="settle-body"></div>
+  <p class="note" style="margin-top:14px">돈은 결제한 통화 그대로 따로 계산해요 (원·엔·달러 환산 안 함). 달러 결제는 카드 청구 금액(원)이 나오면 그 금액으로 보내면 정확해요. <b>예정</b> = 아직 결제 전 금액 (합계에 들어감) · <b>미정</b> = 할지 말지 모르는 것 (합계에서 빠짐) · "각자 현장 결제"는 체크인할 때 각자 자기 몫을 내는 것이라 보낼 돈이 없어요. 친구에게 자기 화면 링크: <a href="#settle-front">프론트 엔드</a> · <a href="#settle-baek">백능아</a></p>
 </section>
 
 <!-- ===== 할 일 ===== -->
@@ -630,10 +607,15 @@ table.legs td { font-size: 13px; }
   const tabs = [...document.querySelectorAll('nav.tabs button')];
   const ids = tabs.map(b => b.dataset.tab);
   function show(id) {
+    let sub = null;
+    if (id === 'budget') id = 'settle';
+    if (id.startsWith('settle-')) { sub = id.slice(7); id = 'settle'; }
     if (!ids.includes(id)) id = 'home';
     tabs.forEach(b => b.setAttribute('aria-selected', String(b.dataset.tab === id)));
     document.querySelectorAll('.panel').forEach(p => p.classList.toggle('on', p.id === id));
-    if (location.hash.slice(1) !== id) history.replaceState(null, '', '#' + id);
+    if (id === 'settle' && window.setSettleWho) window.setSettleWho(sub);
+    const want = sub && id === 'settle' ? 'settle-' + sub : id;
+    if (location.hash.slice(1) !== want) history.replaceState(null, '', '#' + want);
     window.scrollTo(0, 0);
   }
   tabs.forEach(b => b.addEventListener('click', () => show(b.dataset.tab)));
@@ -642,6 +624,96 @@ table.legs td { font-size: 13px; }
     if (a && ids.includes(a.getAttribute('href').slice(1))) { e.preventDefault(); show(a.getAttribute('href').slice(1)); }
   });
   window.addEventListener('hashchange', () => show(location.hash.slice(1)));
+
+  // 정산: 사람별 몫 · 보낼 돈 (통화별로 따로)
+  const PEOPLE = [
+    { k: 'suis', name: 'suis', when: '12/19 ~ 1/1 (또는 12/31)' },
+    { k: 'front', name: '프론트 엔드', when: '12/19 ~ 12/28' },
+    { k: 'baek', name: '백능아', when: '12/19 ~ 12/22' }
+  ];
+  const ALL3 = { suis: 1, front: 1, baek: 1 };
+  // payer: 낸 사람 (null = 각자 현장 결제) · amt null = 금액 모름 · st: paid 결제함 / plan 예정 / maybe 미정
+  const EXP = [
+    { cat: '항공', what: 'suis 김해↔나리타 12/19 → 1/1 · 트립닷컴 KBMCF15 15% 후 (11/4 기준)', cur: 'USD', amt: 297, payer: 'suis', for: { suis: 1 }, st: 'plan' },
+    { cat: '항공', what: '백능아 김해↔나리타 12/19 → 12/22 · 트립닷컴 KBMCF15 15% 후 (11/4 기준)', cur: 'USD', amt: 295, payer: 'suis', for: { baek: 1 }, st: 'plan', note: 'suis 아이디로 같이 결제 (쿠폰 2번째)' },
+    { cat: '항공', what: '프론트 엔드 김해↔나리타 12/19 → 12/28', cur: 'USD', amt: null, payer: 'front', for: { front: 1 }, st: 'plan', note: '금액 정해지면 넣기 · suis 아이디 쿠폰은 2번 다 써서 15% 할인 없음' },
+    { cat: '숙박', what: '新横浜国際ホテル 트윈 12/19~21 (2박)', cur: 'USD', amt: 217, payer: 'suis', for: ALL3, st: 'paid', note: '12/19~21 방값은 셋이 똑같이 나눔' },
+    { cat: '숙박', what: '新横浜富士ビューホテル 싱글 12/19~21 (2박, 조식·온천)', cur: 'JPY', amt: 24500, payer: 'suis', for: ALL3, st: 'plan', note: '예약 전 · 12/16까지 무료 취소' },
+    { cat: '숙박', what: '12/21~22 1박 연장 (고쿠사이 트윈 20,000 + 후지뷰 3박 차액 2,500)', cur: 'JPY', amt: 22500, payer: 'suis', for: ALL3, st: 'maybe', note: '백능아와 12/22까지 같이 있을 때만' },
+    { cat: '숙박', what: '東横INN 仙台西口広瀬通 트윈 12/21~26 (5박)', cur: 'JPY', amt: 54100, payer: null, for: { suis: 1, front: 1 }, st: 'plan', note: '예약함 · 현장 결제 (우쓰노미야로 가면 46,750)' },
+    { cat: '숙박', what: '東横INN 東京駅新大橋前 12/22 (1박)', cur: 'JPY', amt: 10800, payer: null, for: { suis: 1, front: 1 }, st: 'maybe', note: 'tayori 보고 도쿄에서 잘 때만' },
+    { cat: '숙박', what: '東横INN 戸田公園 싱글 12/26~31 (5박)', cur: 'JPY', amt: 38700, payer: null, for: { suis: 1 }, st: 'plan', note: '예약함 · 현장 결제' },
+    { cat: '숙박', what: '東横INN 戸田公園 12/31 1박 추가', cur: 'JPY', amt: 9500, payer: null, for: { suis: 1 }, st: 'maybe', note: '1/1 귀국일 때만' },
+    { cat: '패스', what: 'JR EAST PASS 도호쿠 5일권 (12/21~25)', cur: 'JPY', amt: 70000, payer: null, for: { suis: 1, front: 1 }, st: 'plan', note: '1인 35,000 · 각자 구매' },
+    { cat: '교통', what: '패스 밖 교통 (나리타→신요코하마, 12/26 이후 시내·마쿠하리·나리타 등) · 추정', cur: 'JPY', amt: 22500, payer: null, for: { suis: 1 }, st: 'plan', note: '2만~2.5만 엔 중간값' },
+    { cat: '공연', what: 'COUNTDOWN JAPAN 12/26 + 12/29', cur: 'JPY', amt: 28550, payer: 'suis', for: { suis: 1 }, st: 'paid' },
+    { cat: '공연', what: 'tuki.×星街すいせい', cur: 'JPY', amt: 9900, payer: 'suis', for: { suis: 1 }, st: 'paid' },
+    { cat: '공연', what: 'ロクデナシ', cur: 'JPY', amt: 9380, payer: 'suis', for: { suis: 1 }, st: 'paid' }
+  ];
+  const CUR = { USD: v => 'US$' + v.toLocaleString('en-US', { maximumFractionDigits: 2 }), JPY: v => Math.round(v).toLocaleString('ko-KR') + '엔', KRW: v => Math.round(v).toLocaleString('ko-KR') + '원' };
+  const nm = k => (PEOPLE.find(p => p.k === k) || { name: k }).name;
+  const ST = { paid: '<span class="chip ok">결제함</span>', plan: '<span class="chip warn">예정</span>', maybe: '<span class="chip">미정</span>' };
+  const shareOf = (e, k) => { const w = e.for[k] || 0; if (!w || e.amt == null) return 0; const tot = Object.values(e.for).reduce((a, b) => a + b, 0); return e.amt * w / tot; };
+  const counted = e => e.st !== 'maybe' && e.amt != null;
+  const sumBy = (rows, f) => { const s = {}; rows.forEach(e => { const v = f(e); if (v) s[e.cur] = (s[e.cur] || 0) + v; }); return s; };
+  const fmtSums = s => Object.keys(s).length ? Object.entries(s).map(([c, v]) => CUR[c](v)).join(' + ') : '0';
+  function transfers() {
+    const out = [];
+    const curs = [...new Set(EXP.map(e => e.cur))];
+    curs.forEach(c => {
+      const bal = {};
+      PEOPLE.forEach(p => bal[p.k] = 0);
+      EXP.filter(e => e.cur === c && counted(e) && e.payer).forEach(e => {
+        bal[e.payer] += e.amt;
+        PEOPLE.forEach(p => bal[p.k] -= shareOf(e, p.k));
+      });
+      const debt = PEOPLE.filter(p => bal[p.k] < -0.005).map(p => ({ k: p.k, v: -bal[p.k] }));
+      const cred = PEOPLE.filter(p => bal[p.k] > 0.005).map(p => ({ k: p.k, v: bal[p.k] }));
+      debt.forEach(d => cred.forEach(r => { const v = Math.min(d.v, r.v); if (v > 0.005) { out.push({ from: d.k, to: r.k, cur: c, v }); d.v -= v; r.v -= v; } }));
+    });
+    return out;
+  }
+  const whoBox = document.getElementById('settle-who');
+  const body = document.getElementById('settle-body');
+  let who = 'all';
+  function renderSettle() {
+    whoBox.innerHTML = [{ k: 'all', name: '전체', when: '세 명 다' }].concat(PEOPLE).map(p => `<button type="button" role="tab" data-who="${p.k}" aria-selected="${p.k === who}">${p.name}<small>${p.when}</small></button>`).join('');
+    const tr = transfers();
+    const trLine = t => `<b>${nm(t.from)}</b> → <b>${nm(t.to)}</b> ${CUR[t.cur](t.v)}`;
+    if (who === 'all') {
+      const cards = PEOPLE.map(p => {
+        const mine = sumBy(EXP.filter(counted), e => shareOf(e, p.k));
+        return `<a class="card stat" href="#settle-${p.k}"><div class="k">${p.name} 몫</div><div class="v">${fmtSums(mine)}</div><div class="s">${p.when}</div></a>`;
+      }).join('');
+      const rows = EXP.map(e => `<tr class="${e.st === 'maybe' ? 'dim' : ''}"><td class="num">${e.cat}</td><td>${e.what}${e.note ? `<div class="note">${e.note}</div>` : ''}</td><td class="price">${e.amt == null ? '미정' : CUR[e.cur](e.amt)}</td><td>${e.payer ? nm(e.payer) : '각자 현장 결제'}</td><td>${Object.keys(e.for).map(nm).join(' · ')}</td><td>${ST[e.st]}</td></tr>`).join('');
+      body.innerHTML = `<div class="grid">${cards}</div>
+        <h2>보낼 돈</h2><div class="callout">${tr.length ? tr.map(trLine).join('<br>') : '보낼 돈 없음'}</div>
+        <h2>전체 내역</h2><div class="scroll"><table><thead><tr><th>항목</th><th>내용</th><th class="price">금액</th><th>낸 사람</th><th>나누는 사람</th><th>상태</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+      return;
+    }
+    const p = PEOPLE.find(x => x.k === who);
+    const mineRows = EXP.filter(e => e.for[who]);
+    const mine = sumBy(mineRows.filter(counted), e => shareOf(e, who));
+    const paidBy = sumBy(EXP.filter(e => counted(e) && e.payer === who), e => e.amt);
+    const out = tr.filter(t => t.from === who), inn = tr.filter(t => t.to === who);
+    const moneyBox = out.length ? out.map(t => `<b>${nm(t.to)}</b>에게 ${CUR[t.cur](t.v)}`).join('<br>') : inn.length ? inn.map(t => `<b>${nm(t.from)}</b>에게서 ${CUR[t.cur](t.v)}`).join('<br>') : '없음';
+    const rows = mineRows.map(e => {
+      const n = Object.keys(e.for).length;
+      const how = e.payer === who ? '내가 냄' : e.payer ? nm(e.payer) + '가 냄' : '내가 현장에서';
+      return `<tr class="${e.st === 'maybe' ? 'dim' : ''}"><td class="num">${e.cat}</td><td>${e.what}${n > 1 ? `<div class="note">${n}명이 나눔 · 전체 ${e.amt == null ? '미정' : CUR[e.cur](e.amt)}</div>` : ''}${e.note ? `<div class="note">${e.note}</div>` : ''}</td><td class="price">${e.amt == null ? '미정' : CUR[e.cur](shareOf(e, who))}</td><td>${how}</td><td>${ST[e.st]}</td></tr>`;
+    }).join('');
+    body.innerHTML = `<div class="grid">
+        <div class="card stat"><div class="k">${p.name} 몫 합계</div><div class="v">${fmtSums(mine)}</div><div class="s">결제함 + 예정 · 미정 빼고 · 식비 제외</div></div>
+        <div class="card stat"><div class="k">${p.name}가 먼저 낸 돈</div><div class="v">${fmtSums(paidBy)}</div><div class="s">다른 사람 몫 포함</div></div>
+        <div class="card stat"><div class="k">${out.length ? '보낼 돈' : '받을 돈'}</div><div class="v" style="font-size:16px">${moneyBox}</div><div class="s">현장 결제분은 빠짐</div></div>
+      </div>
+      <h2>${p.name} 내역</h2><div class="scroll"><table><thead><tr><th>항목</th><th>내용</th><th class="price">내 몫</th><th>누가 냄</th><th>상태</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  }
+  whoBox.addEventListener('click', e => { const b = e.target.closest('button[data-who]'); if (!b) return; who = b.dataset.who; history.replaceState(null, '', who === 'all' ? '#settle' : '#settle-' + who); renderSettle(); });
+  window.setSettleWho = k => { who = PEOPLE.some(p => p.k === k) ? k : 'all'; renderSettle(); };
+  renderSettle();
+  const homeSettle = document.getElementById('home-settle');
+  if (homeSettle) homeSettle.textContent = fmtSums(sumBy(EXP.filter(counted), e => shareOf(e, 'suis')));
 
   // 지난 마감 흐리게 + 한눈에에 다음 할 일 3개 복사
   const today = new Date(); today.setHours(0, 0, 0, 0);
