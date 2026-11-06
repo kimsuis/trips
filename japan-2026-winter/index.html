@@ -89,7 +89,9 @@ td.num { white-space: nowrap; font-weight: 600; }
 td.price, th.price { white-space: nowrap; font-variant-numeric: tabular-nums; text-align: right; }
 tr.dim td { color: var(--muted); }
 tr.sum td { font-weight: 650; background: var(--surface-2); }
-table.who-stay td { white-space: nowrap; }
+table.who-stay { table-layout: fixed; }
+table.who-stay td, table.who-stay th { font-size: 13px; padding: 8px 8px; }
+table.who-stay td.num, table.who-stay th:first-child { width: 72px; white-space: nowrap; }
 table.who-stay td.num small { color: var(--muted); font-weight: 400; }
 /* 할 일 */
 .todo { display: flex; flex-direction: column; gap: 8px; }
@@ -378,12 +380,12 @@ table.legs td { font-size: 13px; }
   <div class="scroll"><table class="who-stay">
     <thead><tr><th>밤</th><th>suis</th><th>프론트 엔드</th><th>백능아</th></tr></thead>
     <tbody>
-      <tr><td class="num">12/19 <small>토</small></td><td>신요코하마 1박 (트립닷컴)</td><td>新横浜国際ホテル 트윈</td><td>新横浜国際ホテル 트윈</td></tr>
-      <tr><td class="num">12/20 <small>일</small></td><td>新横浜国際ホテル 트윈</td><td>新横浜国際ホテル 트윈</td><td>R&amp;B ホテル新横浜駅前</td></tr>
-      <tr><td class="num">12/21 <small>월</small></td><td>東横INN 仙台 <span class="note">(또는 宇都宮)</span></td><td>東横INN 仙台 <span class="note">(또는 宇都宮)</span></td><td>R&amp;B ホテル新横浜駅前</td></tr>
-      <tr><td class="num">12/22~25</td><td>東横INN 仙台 <span class="note">(12/22 도쿄 1박 후보)</span></td><td>東横INN 仙台</td><td class="note">12/22 귀국</td></tr>
-      <tr><td class="num">12/26~27</td><td>東横INN 戸田公園</td><td><span class="chip warn">미정</span> 12/28 귀국 전 2박</td><td class="note">—</td></tr>
-      <tr><td class="num">12/28~31</td><td>東横INN 戸田公園</td><td class="note">12/28 귀국</td><td class="note">—</td></tr>
+      <tr><td class="num">12/19 <small>토</small></td><td>신요코하마 1박<span class="note"> (트립닷컴)</span></td><td>고쿠사이 트윈</td><td>고쿠사이 트윈</td></tr>
+      <tr><td class="num">12/20 <small>일</small></td><td>고쿠사이 트윈</td><td>고쿠사이 트윈</td><td>R&amp;B 신요코하마</td></tr>
+      <tr><td class="num">12/21 <small>월</small></td><td>도요코인 센다이<span class="note"> (또는 우쓰노미야)</span></td><td>도요코인 센다이<span class="note"> (또는 우쓰노미야)</span></td><td>R&amp;B 신요코하마</td></tr>
+      <tr><td class="num">12/22~25</td><td>도요코인 센다이<span class="note"> (12/22 도쿄 1박 후보)</span></td><td>도요코인 센다이</td><td class="note">12/22 귀국</td></tr>
+      <tr><td class="num">12/26~27</td><td>도요코인 도다코엔</td><td><span class="chip warn">미정</span> 12/28 귀국 전 2박</td><td class="note">—</td></tr>
+      <tr><td class="num">12/28~31</td><td>도요코인 도다코엔</td><td class="note">12/28 귀국</td><td class="note">—</td></tr>
       <tr><td class="num">1/1 <small>금</small></td><td class="note">귀국</td><td class="note">—</td><td class="note">—</td></tr>
     </tbody>
   </table></div>
