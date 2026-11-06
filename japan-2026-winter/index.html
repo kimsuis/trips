@@ -89,6 +89,8 @@ td.num { white-space: nowrap; font-weight: 600; }
 td.price, th.price { white-space: nowrap; font-variant-numeric: tabular-nums; text-align: right; }
 tr.dim td { color: var(--muted); }
 tr.sum td { font-weight: 650; background: var(--surface-2); }
+table.who-stay td { white-space: nowrap; }
+table.who-stay td.num small { color: var(--muted); font-weight: 400; }
 /* 할 일 */
 .todo { display: flex; flex-direction: column; gap: 8px; }
 .todo .item { display: grid; grid-template-columns: 120px 1fr; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; }
@@ -372,22 +374,37 @@ table.legs td { font-size: 13px; }
 
 <!-- ===== 숙소 ===== -->
 <section class="panel" id="stay" role="tabpanel">
-  <h2>숙소</h2>
-  <div class="scroll"><table>
-    <thead><tr><th>박</th><th>숙소</th><th>상태</th><th class="price">금액</th><th>무료 취소</th></tr></thead>
+  <h2>밤마다 누가 어디서 자나 <span class="note">11/7 정리</span></h2>
+  <div class="scroll"><table class="who-stay">
+    <thead><tr><th>밤</th><th>suis</th><th>프론트 엔드</th><th>백능아</th></tr></thead>
     <tbody>
-      <tr><td class="num">12/19~21<br><span class="note">2박 · 2인</span></td><td><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/921" target="_blank" rel="noopener">新横浜国際ホテル</a> 금연 트윈<div class="note">12/19 백능아·프론트 엔드 · 12/20 suis·프론트 엔드 · 신요코하마역 도보 1~3분</div></td><td><span class="chip ok">결제함</span></td><td class="price">US$217<div class="note">KB 쿠폰 적용 · 1인 $108.5</div></td><td>확인 메일 참고<div class="note">취소하면 쿠폰은 사용 처리</div></td></tr>
-            <tr><td class="num">12/19~20<br><span class="note">1박 · suis</span></td><td>신요코하마 1박 (트립닷컴)<div class="note">suis 혼자</div></td><td><span class="chip ok">결제함</span></td><td class="price">76,977원<div class="note">특별 할인 -1,671원</div></td><td>12/17 12:00 (현지)</td></tr>
-      <tr><td class="num">12/20~22<br><span class="note">2박 · 백능아</span></td><td>R&amp;B ホテル新横浜駅前<div class="note">백능아 혼자 · 12/22 귀국</div></td><td><span class="chip ok">예약함</span></td><td class="price">128,000원</td><td>확인 메일 참고</td></tr>
-      <tr><td class="num">12/21~26<br><span class="note">5박 · 2인</span></td><td>東横INN 仙台西口広瀬通 금연 트윈 110cm×2<div class="note">역 4분 · 24시간 세탁 · 조식</div></td><td><span class="chip ok">예약함</span></td><td class="price">54,100엔</td><td>체크인 당일 12:00<div class="note">2박째부터 그날 10:00</div></td></tr>
-      <tr><td class="num">12/21~26<br><span class="note">5박 · 2인</span></td><td><a href="https://www.toyoko-inn.com/korea/search/result/room_plan/?hotel=00056&amp;start=2026-12-21&amp;end=2026-12-26&amp;room=1&amp;people=2&amp;smoking=noSmoking&amp;tab=roomType&amp;sort=recommend" target="_blank" rel="noopener">東横INN 宇都宮駅前1</a> 트윈 110cm×2<div class="note">도쿄 50분 · 센다이 75~85분 · 위와 둘 중 하나 취소</div></td><td><span class="chip ok">예약함</span> <span class="chip">예비</span></td><td class="price">46,750엔</td><td>체크인 당일 12:00</td></tr>
-      <tr class="dim"><td class="num">12/22<br><span class="note">1박 · 2인</span></td><td><a href="https://www.toyoko-inn.com/korea/search/result/room_plan/?hotel=00176&amp;start=2026-12-22&amp;end=2026-12-23&amp;room=1&amp;people=2&amp;smoking=noSmoking&amp;tab=roomType&amp;sort=recommend" target="_blank" rel="noopener">東横INN 東京駅新大橋前</a><div class="note">tayori용 · 센다이 거점일 때만</div></td><td><span class="chip warn">후보</span></td><td class="price">10,800엔</td><td>체크인 당일 12:00</td></tr>
-      <tr><td class="num">12/26~31<br><span class="note">5박 · 혼자</span></td><td>東横INN 埼玉戸田公園駅西口 금연 싱글<div class="note">시부야 30분 · 마쿠하리 80분 · 나리타 1시간 45분</div></td><td><span class="chip ok">예약함</span></td><td class="price">38,700엔</td><td>체크인 당일 12:00<div class="note">2박째부터 그날 10:00</div></td></tr>
-      <tr><td class="num">12/31~1/1<br><span class="note">1박 · 혼자</span></td><td>東横INN 埼玉戸田公園駅西口 (같은 호텔 1박 추가)<div class="note">1/1 귀국 확정 (11/5)</div></td><td><span class="chip ok">예약함</span></td><td class="price">9,500엔</td><td>체크인 당일 12:00</td></tr>
+      <tr><td class="num">12/19 <small>토</small></td><td>신요코하마 1박 (트립닷컴)</td><td>新横浜国際ホテル 트윈</td><td>新横浜国際ホテル 트윈</td></tr>
+      <tr><td class="num">12/20 <small>일</small></td><td>新横浜国際ホテル 트윈</td><td>新横浜国際ホテル 트윈</td><td>R&amp;B ホテル新横浜駅前</td></tr>
+      <tr><td class="num">12/21 <small>월</small></td><td>東横INN 仙台 <span class="note">(또는 宇都宮)</span></td><td>東横INN 仙台 <span class="note">(또는 宇都宮)</span></td><td>R&amp;B ホテル新横浜駅前</td></tr>
+      <tr><td class="num">12/22~25</td><td>東横INN 仙台 <span class="note">(12/22 도쿄 1박 후보)</span></td><td>東横INN 仙台</td><td class="note">12/22 귀국</td></tr>
+      <tr><td class="num">12/26~27</td><td>東横INN 戸田公園</td><td><span class="chip warn">미정</span> 12/28 귀국 전 2박</td><td class="note">—</td></tr>
+      <tr><td class="num">12/28~31</td><td>東横INN 戸田公園</td><td class="note">12/28 귀국</td><td class="note">—</td></tr>
+      <tr><td class="num">1/1 <small>금</small></td><td class="note">귀국</td><td class="note">—</td><td class="note">—</td></tr>
     </tbody>
   </table></div>
-  <div class="callout" style="margin:18px 0 0;background:var(--ok-soft)"><b>12/19~21 숙소 정리됨 (11/7)</b><br>· 12/19 밤: suis = 신요코하마 1박(트립닷컴) · 백능아·프론트 엔드 = 고쿠사이 트윈<br>· 12/20 밤: suis·프론트 엔드 = 고쿠사이 트윈 · 백능아 = R&amp;B 신요코하마 에키마에<br>· 12/21 밤: suis·프론트 엔드 = 센다이(원래 계획) · 백능아 = R&amp;B (12/22 귀국)<br>아래 3인 숙소 표는 지난 조사 기록</div>
-  <h2>(지난 조사) 친구 2 합류 · 3인 숙소 <span class="note">11/3 조회 · 11/4 저녁 다시 확인 (후지뷰·고쿠사이·3인실 값 그대로) · 숙박 전체 합계 · 세금 포함 · 숙박세 별도</span></h2>
+
+  <h2>예약 목록</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>박</th><th>숙소 · 누가</th><th>상태</th><th class="price">금액 · 낸 사람</th><th>무료 취소</th></tr></thead>
+    <tbody>
+      <tr><td class="num">12/19~21<br><span class="note">2박 · 트윈</span></td><td><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/921" target="_blank" rel="noopener">新横浜国際ホテル</a> 금연 트윈<div class="note">12/19 백능아·프론트 엔드 · 12/20 suis·프론트 엔드 · 신요코하마역 도보 1~3분</div></td><td><span class="chip ok">결제함</span></td><td class="price">US$217<div class="note">suis · 라쿠텐 KB 쿠폰</div></td><td>확인 메일 참고<div class="note">취소하면 쿠폰은 사용 처리</div></td></tr>
+      <tr><td class="num">12/19~20<br><span class="note">1박</span></td><td>신요코하마 1박 (트립닷컴)<div class="note">suis</div></td><td><span class="chip ok">결제함</span></td><td class="price">76,977원<div class="note">suis · 특별 할인 -1,671원</div></td><td>12/17 12:00 (현지)</td></tr>
+      <tr><td class="num">12/20~22<br><span class="note">2박</span></td><td>R&amp;B ホテル新横浜駅前<div class="note">백능아 · 12/22 귀국</div></td><td><span class="chip ok">예약함</span></td><td class="price">128,000원<div class="note">백능아</div></td><td>확인 메일 참고</td></tr>
+      <tr><td class="num">12/21~26<br><span class="note">5박 · 트윈</span></td><td>東横INN 仙台西口広瀬通 금연 트윈 110cm×2<div class="note">suis·프론트 엔드 · 역 4분 · 24시간 세탁 · 조식</div></td><td><span class="chip ok">예약함</span></td><td class="price">54,100엔<div class="note">현장 결제 · 반씩</div></td><td>체크인 당일 12:00<div class="note">2박째부터 그날 10:00</div></td></tr>
+      <tr><td class="num">12/21~26<br><span class="note">5박 · 트윈</span></td><td><a href="https://www.toyoko-inn.com/korea/search/result/room_plan/?hotel=00056&amp;start=2026-12-21&amp;end=2026-12-26&amp;room=1&amp;people=2&amp;smoking=noSmoking&amp;tab=roomType&amp;sort=recommend" target="_blank" rel="noopener">東横INN 宇都宮駅前1</a> 트윈 110cm×2<div class="note">위 센다이와 둘 중 하나 취소 · 도쿄 50분 · 센다이 75~85분</div></td><td><span class="chip ok">예약함</span> <span class="chip">예비</span></td><td class="price">46,750엔</td><td>체크인 당일 12:00<div class="note">12/21 12:00까지 하나 취소</div></td></tr>
+      <tr class="dim"><td class="num">12/22<br><span class="note">1박 · 2인</span></td><td><a href="https://www.toyoko-inn.com/korea/search/result/room_plan/?hotel=00176&amp;start=2026-12-22&amp;end=2026-12-23&amp;room=1&amp;people=2&amp;smoking=noSmoking&amp;tab=roomType&amp;sort=recommend" target="_blank" rel="noopener">東横INN 東京駅新大橋前</a><div class="note">tayori 볼 때만 · 센다이 거점일 때</div></td><td><span class="chip warn">후보</span></td><td class="price">10,800엔</td><td>체크인 당일 12:00</td></tr>
+      <tr><td class="num">12/26~1/1<br><span class="note">6박 · 싱글</span></td><td>東横INN 埼玉戸田公園駅西口 금연 싱글<div class="note">suis · 12/26~31 5박 38,700엔 + 12/31 1박 9,500엔 · 시부야 30분 · 마쿠하리 80분 · 나리타 1시간 45분</div></td><td><span class="chip ok">예약함</span></td><td class="price">48,200엔<div class="note">현장 결제</div></td><td>체크인 당일 12:00</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">예약번호는 숙소.md에만 있음. 남은 결정: 센다이 vs 우쓰노미야 하나 취소 (12/21 12:00까지 무료) · 프론트 엔드 12/26~27 숙소 · 12/22 도쿄 1박 할지. 센다이 vs 우쓰노미야: 우쓰노미야는 도쿄 공연(12/22·12/25)에 가깝고 더 싸지만, 하야부사·고마치가 서지 않아 도호쿠 당일치기가 편도 40~60분 길어짐.</p>
+
+  <details class="fold" style="margin-top:18px"><summary>지난 조사: 12/19~22 3인 숙소 비교 (11/3~11/6)</summary>
+  <h2 style="font-size:16px">친구 2 합류 · 3인 숙소 <span class="note">11/3 조회 · 11/4 저녁 다시 확인 (후지뷰·고쿠사이·3인실 값 그대로) · 숙박 전체 합계 · 세금 포함 · 숙박세 별도</span></h2>
   <div class="callout" style="margin-bottom:10px"><b>결론: 고쿠사이 트윈(US$217)은 그대로 두고 친구 2 방만 따로 잡는 게 제일 쌈.</b> 같은 트윈을 지금 사면 54,000엔이라 지금 예약이 훨씬 쌈.<br>
   · <b>취소되나?</b> 라쿠텐 해외판은 호텔이 정한 취소 규정대로 (예약 페이지에 표시). 환불은 카드 결제 주기에 따라 1~2달 걸릴 수 있음. <b>KB 쿠폰은 취소하면 사용 처리라 돌아오지 않음</b> → 취소하고 3인실로 다시 잡으면 손해<br>
   · <b>12/19가 문제:</b> 요코하마 도요코인은 12/19 전부 매진, 고쿠사이 3인 코너트윈도 12/19만 매진</div>
@@ -405,7 +422,7 @@ table.legs td { font-size: 13px; }
     </tbody>
   </table></div>
   <p class="note">B안이면 12/21 센다이(또는 우쓰노미야) 체크인을 12/22로 미뤄야 함 → 도요코인 예약 날짜 변경, 패스 시작일도 12/22로. 12/22 tayori(도쿄)는 요코하마에서 가기 더 쉬워짐. 기존 예약의 실제 취소 규정은 라쿠텐 예약 페이지에서 확인 (로그인 필요라 못 봄).</p>
-  <p class="note">예약번호는 숙소.md에만 있음. 센다이 vs 우쓰노미야: 우쓰노미야는 도쿄 공연(12/22·12/25)에 가깝고 더 싸지만, 하야부사·고마치가 서지 않아 도호쿠 당일치기가 편도 40~60분 길어짐.</p>
+  </details>
 </section>
 
 <!-- ===== 교통 ===== -->
